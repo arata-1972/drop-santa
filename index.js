@@ -60,7 +60,12 @@ var api = new ParseServer({
 	      },
 		{
 	        pfx: __dirname + '/iPhoneP12/com.satoshogoWTL store.p12', 
-	        bundleId: 'com.arata1972.satoshogoWTL',  
+	        bundleId: 'com.satoshogoWTL',  
+	        production: true
+	      },
+		{
+	        pfx: __dirname + '/iPhoneP12/com.satoshogoBigTranslatorPro store.p12', 
+	        bundleId: 'com.satoshogoBigTranslatorPro',  
 	        production: true
 	      },
 		{
