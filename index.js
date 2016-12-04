@@ -68,6 +68,11 @@ var api = new ParseServer({
 	        bundleId: 'com.satoshogoBigTranslatorPro',  
 	        production: true
 	      },
+		    {//com.arata1972inc.SimpleBig
+	        pfx: __dirname + '/iPhoneP12/com.arata1972inc.SimpleBig store.p12', 
+	        bundleId: 'com.arata1972inc.SimpleBig',  
+	        production: true
+	      },
 		{
 	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapanesePersian store.p12', 
 	        bundleId: 'com.satoshogoJapanesePersian',  
