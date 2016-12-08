@@ -98,6 +98,26 @@ var api = new ParseServer({
 	        bundleId: 'com.satoshogoJapaneseFrenchEnglish',  
 	        production: true
 	      },
+		    {//11
+	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateMalay store.p12', 
+	        bundleId: 'com.satoshogoTranslateMalay',  
+	        production: true
+	      },
+		    {//12
+	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapaneseViEnlish store.p12', 
+	        bundleId: 'com.satoshogoJapaneseViEnlish',  
+	        production: true
+	      },
+		    {//13
+	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateVitnamnesePro store.p12', 
+	        bundleId: 'com.satoshogoTranslateVitnamnesePro',  
+	        production: true
+	      },
+		    {//14
+	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateVitnamnese store.p12', 
+	        bundleId: 'com.satoshogoTranslateVitnamnese',  
+	        production: true
+	      },
 		{
 	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapanesePersian store.p12', 
 	        bundleId: 'com.satoshogoJapanesePersian',  
