@@ -113,9 +113,14 @@ var api = new ParseServer({
 	        bundleId: 'com.satoshogoTranslateVitnamnesePro',  
 	        production: true
 	      },
-		    {//14
+		{//14
 	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateVitnamnese store.p12', 
 	        bundleId: 'com.satoshogoTranslateVitnamnese',  
+	        production: true
+	      },
+		    {//com.arata1972inc.SimpleBigContonese store.p12
+	        pfx: __dirname + '/iPhoneP12/com.arata1972inc.SimpleBigContonese store.p12', 
+	        bundleId: 'com.arata1972inc.SimpleBigContonese',  
 	        production: true
 	      },
 		{
