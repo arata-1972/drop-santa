@@ -11,126 +11,104 @@ if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 
+
+
+
+
 var api = new ParseServer({
-	  databaseURI: databaseUri || 'mongodb://heroku_xwr55ctd:jptobi1jo8dsuvrg7r05899nto@ds027215.mlab.com:27215/heroku_xwr55ctd',
-	  cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-	  appId: process.env.APP_ID || 'hyHA6CZ4BqzMXKy4JUYKGus0NYJNNXRFY2Zkz9ny',
-	  masterKey: process.env.MASTER_KEY || '2FSrqlKV7SfhsXUBNuSu3PbkgLY8vXSwFzjOJSdD', //Add your master key here. Keep it secret!
-	  serverURL: process.env.SERVER_URL || 'https://japanese-english.herokuapp.com/parse',  // Don't forget to change to https if needed
-	  liveQuery: {
-	    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
-	  },
-	  // 以下為新增部分
-	  push: {
-	    // 此篇未提到 Android，因此註解掉
-	    // android: {
-	    //   senderId: '...',
-	    //   apiKey: '...'
-	    // },
-	    ios:[
-	      {
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslate-English store.p12',
-	        bundleId: 'com.satoshogoTranslate-English',
-	        production: true
-	      },
-	      {
-	        pfx: __dirname + '/iPhoneP12/om.satoshogoDictApp store.p12', 
-	        bundleId: 'om.satoshogoDictApp',  
-	        production: true
-	      },
-	      {
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapaneseEnglishPro store.p12', 
-	        bundleId: 'com.satoshogoJapaneseEnglishPro',  
-	        production: true
-	      },
-	      {
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateSwedish store.p12', 
-	        bundleId: 'com.satoshogoTranslateSwedish',  
-	        production: true
-	      },
-	      {
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateHindi store.p12', 
-	        bundleId: 'com.satoshogoTranslateHindi',  
-	        production: true
-	      },
-		{
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoDenmark store.p12', 
-	        bundleId: 'com.arata1972.SimpleHiragana',  
-	        production: true
-	      },
-		{
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoWTL store.p12', 
-	        bundleId: 'com.satoshogoWTL',  
-	        production: true
-	      },
-		{
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoBigTranslatorPro store.p12', 
-	        bundleId: 'com.satoshogoBigTranslatorPro',  
-	        production: true
-	      },
-		{
-	        pfx: __dirname + '/iPhoneP12/com.arata1972inc.SimpleBig store.p12', 
-	        bundleId: 'com.arata1972inc.SimpleBig',  
-	        production: true
-	      },
-		{
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateThai store.p12', 
-	        bundleId: 'com.satoshogoTranslateThai',  
-	        production: true
-	      },
-		{
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapaneseThai.pro store.p12', 
-	        bundleId: 'com.satoshogoJapaneseThai.pro',  
-	        production: true
-	      },
-		    {
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapaneseThaiEnglish store.p12', 
-	        bundleId: 'com.satoshogoJapaneseThaiEnglish',  
-	        production: true
-	      },
-		 {
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateFrench store.p12', 
-	        bundleId: 'com.satoshogoTranslateFrench',  
-	        production: true
-	      },
-		    {
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapaneseFrenchEnglish store.p12', 
-	        bundleId: 'com.satoshogoJapaneseFrenchEnglish',  
-	        production: true
-	      },
-		    {//11
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateMalay store.p12', 
-	        bundleId: 'com.satoshogoTranslateMalay',  
-	        production: true
-	      },
-		    {//12
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapaneseViEnlish store.p12', 
-	        bundleId: 'com.satoshogoJapaneseViEnlish',  
-	        production: true
-	      },
-		    {//13
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateVitnamnesePro store.p12', 
-	        bundleId: 'com.satoshogoTranslateVitnamnesePro',  
-	        production: true
-	      },
-		{//14
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoTranslateVitnamnese store.p12', 
-	        bundleId: 'com.satoshogoTranslateVitnamnese',  
-	        production: true
-	      },
-		    {//com.arata1972inc.SimpleBigContonese store.p12
-	        pfx: __dirname + '/iPhoneP12/com.arata1972inc.SimpleBigContonese store.p12', 
-	        bundleId: 'com.arata1972inc.SimpleBigContonese',  
-	        production: true
-	      },
-		{
-	        pfx: __dirname + '/iPhoneP12/com.satoshogoJapanesePersian store.p12', 
-	        bundleId: 'com.satoshogoJapanesePersian',  
-	        production: true
-	      }
-	       ]
-	  },
-	});
+		  databaseURI: databaseUri || 'mongodb://heroku_nw7zbdmc:g3kqtkabdhli679kdsdkcisph3@ds153815.mlab.com:53815/heroku_nw7zbdmc',
+		  cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
+		  appId: process.env.APP_ID || '3g8n7kr0',
+		  masterKey: process.env.MASTER_KEY || '6q5340ks', //Add your master key here. Keep it secret!
+		  serverURL: process.env.SERVER_URL || 'https://word-game-app.herokuapp.com/parse',  // Don't forget to change to https if needed
+		  liveQuery: {
+		    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
+		  },
+		  // 以下為新增部分
+		  push: {
+		    // 此篇未提到 Android，因此註解掉
+		    // android: {
+		    //   senderId: '...',
+		    //   apiKey: '...'
+		    // },
+		    ios:[
+			    {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.hsk store.p12',
+		        bundleId: 'com.arata1972.wordgame.hsk',
+		        production: true
+		      },
+			    
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptzhth store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlptzhth',
+		        production: true
+		      },
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptzhvi store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlptzhvi',
+		        production: true
+		      },
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptzhen store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlptzhen',
+		        production: true
+		      },
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlpthindi store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlpthindi',
+		        production: true
+		      },
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptindonesian store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlptindonesian',
+		        production: true
+		      },
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptvi store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlptvi',
+		        production: true
+		      },
+			    
+			       {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptspanish store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlptspanish',
+		        production: true
+		      },
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlpttagalog store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlpttagalog',
+		        production: true
+		      },
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlpttthai store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlpttthai',
+		        production: true
+		      },
+			     {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptenglish store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlptenglish',
+		        production: true
+		      },
+		      
+			    {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgameKLPT store.p12',
+		        bundleId: 'com.arata1972.wordgameKLPT',
+		        production: true
+		      },
+			    {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptchinese store.p12',
+		        bundleId: 'com.arata1972.wordgame.jlptchinese',
+		        production: true
+		      },
+		      {
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgameEiken store.p12', 
+		        bundleId: 'com.arata1972.wordgameEiken',  
+		        production: true
+		      }
+		       ]
+		  },
+		});
+
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
 // javascriptKey, restAPIKey, dotNetKey, clientKey
