@@ -16,11 +16,11 @@ if (!databaseUri) {
 
 
 var api = new ParseServer({
-		  databaseURI: databaseUri || 'mongodb://heroku_nw7zbdmc:g3kqtkabdhli679kdsdkcisph3@ds153815.mlab.com:53815/heroku_nw7zbdmc',
+		  databaseURI: databaseUri || 'mongodb://heroku_1r6dcx1l:akqhh0jbl5daoktppcdc1vh2fh@ds123084.mlab.com:23084/heroku_1r6dcx1l',
 		  cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-		  appId: process.env.APP_ID || '3g8n7kr0',
-		  masterKey: process.env.MASTER_KEY || '6q5340ks', //Add your master key here. Keep it secret!
-		  serverURL: process.env.SERVER_URL || 'https://word-game-app.herokuapp.com/parse',  // Don't forget to change to https if needed
+		  appId: process.env.APP_ID || 'jbd27379',
+		  masterKey: process.env.MASTER_KEY || 'dvnq3sfw', //Add your master key here. Keep it secret!
+		  serverURL: process.env.SERVER_URL || 'https://splited-away.herokuapp.com/parse',  // Don't forget to change to https if needed
 		  liveQuery: {
 		    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
 		  },
