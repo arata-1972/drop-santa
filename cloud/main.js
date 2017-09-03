@@ -8,7 +8,7 @@ Parse.Cloud.define('storyJapan', function(req, res) {
     
     
     var query = new Parse.Query(StoryJapan);
-    query.equalTo("level",parseInt(req.params.level));
+    //query.equalTo("level",parseInt(req.params.level));
   query.limit(1000);
 //   Array.prototype.randomElement = function(min,max){
   
