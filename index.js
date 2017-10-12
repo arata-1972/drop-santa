@@ -32,80 +32,12 @@ var api = new ParseServer({
 		    //   apiKey: '...'
 		    // },
 		    ios:[
-			    {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.hsk store.p12',
-		        bundleId: 'com.arata1972.wordgame.hsk',
-		        production: true
-		      },
-			    
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptzhth store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlptzhth',
-		        production: true
-		      },
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptzhvi store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlptzhvi',
-		        production: true
-		      },
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptzhen store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlptzhen',
-		        production: true
-		      },
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlpthindi store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlpthindi',
-		        production: true
-		      },
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptindonesian store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlptindonesian',
-		        production: true
-		      },
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptvi store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlptvi',
-		        production: true
-		      },
-			    
-			       {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptspanish store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlptspanish',
-		        production: true
-		      },
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlpttagalog store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlpttagalog',
-		        production: true
-		      },
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlpttthai store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlpttthai',
-		        production: true
-		      },
-			     {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptenglish store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlptenglish',
-		        production: true
-		      },
-		      
-			    {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgameKLPT store.p12',
-		        bundleId: 'com.arata1972.wordgameKLPT',
-		        production: true
-		      },
-			    {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgame.jlptchinese store.p12',
-		        bundleId: 'com.arata1972.wordgame.jlptchinese',
-		        production: true
-		      },
-		      {
-		        pfx: __dirname + '/iPhoneP12/com.arata1972.wordgameEiken store.p12', 
-		        bundleId: 'com.arata1972.wordgameEiken',  
+			{//com.arata1972.findmyself store.p12
+		        pfx: __dirname + '/iPhoneP12/com.arata1972.findmyself store.p12',
+		        bundleId: 'com.arata1972.findmyself',
 		        production: true
 		      }
-		       ]
+			]
 		  },
 		});
 
